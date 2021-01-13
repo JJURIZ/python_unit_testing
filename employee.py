@@ -17,5 +17,5 @@ class Employee:
         return '{} {}'.format(self.first, self.last)
 
     def apply_raise(self):
-        self.pay = round(float(self.pay * self.raise_amount))
 
+        self.pay = round(float(self.pay * self.raise_amount))

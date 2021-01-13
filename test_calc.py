@@ -1,13 +1,14 @@
-import unittest
+import unittest # Test runner and framework
 import calc 
+# from calc import add, subtract, multiply, divide
 
 class TestCalc(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(calc.add(10, 5), 15)
-        self.assertEqual(calc.add(100, 1), 101)
-        self.assertEqual(calc.add(-88, 88), 0)
-        self.assertEqual(calc.add(2, 2), 4)
+        self.assertEqual(calc.add(100, 1), 101, "Should equal 101")
+        self.assertEqual(calc.add(-88, 88), 0, "Should return 0")
+        self.assertEqual(calc.add(2, 2), 4, "Should return 4")
 
     def test_subtract(self):
         self.assertEqual(calc.subtract(10, 5), 5)
@@ -27,7 +28,7 @@ class TestCalc(unittest.TestCase):
             n = 10
             l = 0
             calc.divide(n, l)
-
+        # These two are the same, with one creating variables for values and passing those values in. The other just provides values. 
         with self.assertRaises(ValueError):
             calc.divide(99999, 0)
 
